@@ -4,7 +4,6 @@ import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
 import { AddToCartService } from './add-to-cart.service';
 import { GetSvgBarcodeService } from './get-svg-barcode.service';
-import { SearchArea } from 'scandit-sdk/build/main/lib/searchArea';
 
 @Component({
   selector: 'scandit-app',
@@ -37,8 +36,6 @@ export class AppComponent  {
   public enableSoundOnScan: boolean = true;
   public isShowDiv: boolean = false;  
   public possibleCameras: Camera[] = [];
-
-  public searchArea: SearchArea;
 
 
   constructor(private addToCartService : AddToCartService, private matIconRegistry: MatIconRegistry,private domSanitizer: DomSanitizer, private svgBarcode: GetSvgBarcodeService) {
